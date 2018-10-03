@@ -1,5 +1,4 @@
 @items = @pokemon.items
-debugger;
 json.pokemon do
   json.extract! @pokemon, :id, :name, :attack, :defense, :moves, :poke_type, :image_url
   json.set! :item_ids, @items.map {|item| item.id}
