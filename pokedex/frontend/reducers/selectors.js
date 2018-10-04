@@ -1,5 +1,4 @@
-
-import { requestAllPokemon } from '../middleware/thunk';
+import { requestAllPokemon, requestSinglePokemon } from '../middleware/thunk';
 
 export const selectAllPokemon = (state) => {
   let output = [];
@@ -8,4 +7,8 @@ export const selectAllPokemon = (state) => {
     output.push(state.entities.pokemon[key]);
   });
   return output;
+};
+
+export const selectSinglePokemon = (state) => {
+  return [state.entities.pokemon];
 };
